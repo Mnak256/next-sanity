@@ -1,0 +1,38 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": true,
+  "editor.useTabStops": true,
+  "prettier.tabWidth": 2,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 80,
+  "prettier.useTabs": false,
+  "prettier.trailingComma": "none",
+  "prettier.jsxBracketSameLine": false,
+  "prettier.useEditorConfig": true,
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+  "search.exclude": {
+    "**/coverage": true,
+    "**/.history": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "files.exclude": {
+    "**/.git": true
+  },
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true
+  },
+  "editor.formatOnPaste": true
+}
