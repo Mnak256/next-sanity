@@ -1,16 +1,16 @@
 import React from 'react'
-import { Board, Message } from './styles'
+import styles from '../../styles/MessageBoard.module.css'
 
 const MessageBoard = () => {
   return (
     <div>
-      <Board>
-        <Message>My first message</Message>
-        <Message>My secont message</Message>
-        <Message>All hail sanity cms</Message>
-        <Message>My first message</Message>
-        <Message>My secont message</Message>
-      </Board>
+      <div className={styles.board}>
+        <div className={styles.message}>My first div</div>
+        <div className={styles.message}>My secont div</div>
+        <div className={styles.message}>All hail sanity cms</div>
+        <div className={styles.message}>My first div</div>
+        <div className={styles.message}>My secont div</div>
+      </div>
     </div>
   )
 }

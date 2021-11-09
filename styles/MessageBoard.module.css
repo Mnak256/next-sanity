@@ -1,0 +1,29 @@
+.button {
+  background-color: #6255a1;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+}
+.button:hover {
+  box-shadow: 0 0 8px 0 #8d8484;
+}
+.board {
+  margin: auto;
+  max-width: 800px;
+  min-height: 100px;
+  margin: 16px;
+  padding: 16px;
+  background-color: #8983a7;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.message {
+  margin: 16px;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: #206380;
+}

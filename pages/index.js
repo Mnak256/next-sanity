@@ -1,22 +1,33 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { routes } from '../src/common/constants'
+import { getGqlData } from '../src/common/apolloClient'
+import arrayToObject from '../src/common/arraytoObject'
+import { routes, contentKeys } from '../src/common/constants'
+import styles from '../styles/MessageBoard.module.css'
 
-const Home = () => {
+const Home = ({ data: { allContent } }) => {
+  const content = arrayToObject(allContent)
+  console.log({ content })
   return (
     <div>
       <Head>
-        <title>Next Sanity</title>
+        <title>{content[contentKeys.homeHeader]}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <center>
-        <h3>Next Sanity</h3>
+        <h3>{content[contentKeys.homeHeader]}</h3>
         <Link href={routes.messageBoard}>
-          <a>Message board</a>
+          <a className={styles.button}>
+            {content[contentKeys.messageBoardButtonLabel]}
+          </a>
         </Link>
       </center>
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  return await getGqlData()
 }
 
 export default Home
