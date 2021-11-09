@@ -18,6 +18,7 @@ const Home = ({ data: { allContent } }) => {
   return (
     <div>
       <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <title>{content[contentKeys.messageBoardHeader]}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -30,10 +31,8 @@ const Home = ({ data: { allContent } }) => {
             </a>
           </Link>
           <MessageBoard />
-          <div style={{ display: 'flex', maxWidth: '800px' }}>
-            <MessageInput />
-            <MessageDelete />
-          </div>
+          <MessageInput />
+          <MessageDelete />
         </center>
       </ContextProvider>
     </div>

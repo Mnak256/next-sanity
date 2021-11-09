@@ -14,7 +14,7 @@ const MessageDelete = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
       <button
         className={styles.button}
         style={{ backgroundColor: 'red' }}
