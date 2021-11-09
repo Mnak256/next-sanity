@@ -1,0 +1,38 @@
+.button {
+  font-size: 2em;
+  background-color: #423b64;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+  border: none;
+  outline: none;
+}
+.button:hover {
+  box-shadow: inset 0 0 8px 0 #8578c9;
+}
+.input {
+  background-color: #423b64;
+  color: white;
+  flex-grow: 1;
+  font-size: 2em;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+.container {
+  margin: auto;
+  max-width: 800px;
+  min-height: 100px;
+  margin: 16px;
+  padding: 16px;
+  background-color: #8983a7;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}

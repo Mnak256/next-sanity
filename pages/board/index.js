@@ -4,6 +4,7 @@ import { getGqlData } from '../../src/common/apolloClient'
 import arrayToObject from '../../src/common/arraytoObject'
 import { routes, contentKeys } from '../../src/common/constants'
 import MessageBoard from '../../src/MessageBoard'
+import MessageInput from '../../src/MessageInput'
 import styles from '../../styles/MessageBoard.module.css'
 
 const Home = ({ data: { allContent } }) => {
@@ -22,6 +23,7 @@ const Home = ({ data: { allContent } }) => {
           </a>
         </Link>
         <MessageBoard />
+        <MessageInput />
       </center>
     </div>
   )
