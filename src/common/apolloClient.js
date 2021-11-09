@@ -23,4 +23,19 @@ export const getGqlData = async () => {
   }
 }
 
+export const getMessageBoard = async () => {
+  const {
+    data: { allMessageBoard }
+  } = await apolloClient.query({
+    query: gql`
+      query GetLaunches {
+        allMessageBoard {
+          message
+        }
+      }
+    `
+  })
+  return allMessageBoard
+}
+
 export default apolloClient

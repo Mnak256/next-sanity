@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { getGqlData } from '../../src/common/apolloClient'
-import arrayToObject from '../../src/common/arraytoObject'
+import { arrayToObject } from '../../src/common/utils'
 import { routes, contentKeys } from '../../src/common/constants'
 import MessageBoard from '../../src/MessageBoard'
 import MessageInput from '../../src/MessageInput'
