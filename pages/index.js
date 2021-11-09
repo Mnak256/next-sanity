@@ -17,8 +17,9 @@ const Home = ({ data: { allContent } }) => {
         .catch(() => console.log('store reset error'))
     }
   }, [])
+
   const content = arrayToObject(allContent)
-  console.log({ content })
+
   return (
     <div>
       <Head>

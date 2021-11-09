@@ -8,7 +8,7 @@ const apolloClient = new ApolloClient({
 export const getGqlData = async () => {
   const { data } = await apolloClient.query({
     query: gql`
-      query GetLaunches {
+      query GetGqlData {
         allContent {
           key
           value
@@ -16,26 +16,7 @@ export const getGqlData = async () => {
       }
     `
   })
-  return {
-    props: {
-      data
-    }
-  }
-}
-
-export const getMessageBoard = async () => {
-  const {
-    data: { allMessageBoard }
-  } = await apolloClient.query({
-    query: gql`
-      query GetLaunches {
-        allMessageBoard {
-          message
-        }
-      }
-    `
-  })
-  return allMessageBoard
+  return { props: { data } }
 }
 
 export default apolloClient

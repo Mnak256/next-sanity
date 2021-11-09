@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from '../../styles/MessageBoard.module.css'
-import { getMessageBoard } from '../common/apolloClient'
+import context from '../common/context'
 import { arrayToArray } from '../common/utils'
 
 const MessageBoard = () => {
-  const [messages, setMessages] = useState([])
+  const { messages, setMessages } = useContext(context)
 
   useEffect(() => {
-    getMessageBoard()
+    fetch('/api/getMessage')
+      .then((response) => response.json())
       .then((data) => setMessages(arrayToArray(data, 'message')))
       .catch(console.error)
   }, [])
